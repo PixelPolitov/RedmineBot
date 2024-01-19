@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis-bot
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    networks:
+      botNet:
+
+
+  redmine-bot:
+    image: redmine-bot
+    container_name: bot
+    build: .
+    entrypoint: /bot/start.sh
+    volumes:
+      - ./config.ini:/bot/config.ini
+      - ./Logs:/bot/Logs
+      - ./start.sh:/bot/start.sh
+    network_mode: "host"
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  botNet:
+    driver: bridge

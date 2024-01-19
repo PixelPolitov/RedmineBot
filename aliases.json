@@ -1,0 +1,34 @@
+{
+    "selectors": [
+        {
+            "Проект": "projects",
+            "Статус": "status",
+            "Приоритет": "priorities",
+            "Назначено": "assigned_to",
+            "Трекер": "trackers"
+        }
+    ],
+    "requests": [
+        {
+            "project": "Проект",
+            "status": "Статус",
+            "priority": "Приоритет",
+            "author": "Автор",
+            "assigned_to": "Назначено",
+            "subject": "Тема",
+            "description": "Описание",
+            "start_date": "Дата начала",
+            "done_ratio": "Выполнено",
+            "journals": "Комментарии",
+            "estimated_hours": "Оценка времени",
+            "total_estimated_hours": "Оставшееся время",
+            "spent_hours": "Потраченно часов",
+            "total_spent_hours": "Общее количество потраченных часов",
+            "created_on": "Создана",
+            "updated_on": "Обновлена",
+            "tracker": "Трэкер",
+            "id": "№",
+            "parent": "Родительская задача"
+        }
+    ]
+}

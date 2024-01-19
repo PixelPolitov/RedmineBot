@@ -1,0 +1,13 @@
+Dockerfile
+docker-compose.yml
+.pylintrc
+.vscode
+__pycache__
+venv
+redmine_webhooks_api
+bot.log
+config.ini
+READ.txt
+start.bat
+start.sh
+test.py
